@@ -3,220 +3,339 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desert Stream Partners International (DESPI)</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.7;
-            background-color: #faf9f6;
-            color: #222;
-        }
-
-        header {
-            background: #704214;
-            color: white;
-            padding: 30px 50px;
-            text-align: center;
-        }
-
-        nav {
-            background: #333;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: auto;
-            padding: 40px 0;
-        }
-
-        h1, h2, h3 {
-            color: #4a2f15;
-        }
-
-        section {
-            margin-bottom: 50px;
-            padding: 20px;
-            background: white;
-            border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-        }
-
-        footer {
-            background: #222;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-        }
-    </style>
+    <title>DESPI Missions - Bringing Living Water to Spiritual Deserts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-
 <body>
+    <!-- Header with Floating Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <div class="logo-text">DESPI<span>Missions</span></div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#faith">Statement of Faith</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
 
-<header>
-    <h1>Desert Stream Partners International (DESPI)</h1>
-    <p><em>“Vineyard of Christ”</em></p>
-    <p>Incorporated under the Non-Governmental Organizations Act (2016), Republic of South Sudan</p>
-</header>
-
-<nav>
-    <a href="#about">About</a>
-    <a href="#mission">Mission</a>
-    <a href="#programs">Programs</a>
-    <a href="#values">Values</a>
-    <a href="#faith">Faith</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div class="container">
-
-    <!-- HOME -->
-    <section id="home">
-        <h2>Welcome to DESPI</h2>
-        <p>
-            Desert Stream Partners International (DESPI) is an indigenous African missions agency committed to taking 
-            the gospel of Jesus Christ to unreached and underserved communities across Africa and beyond. 
-            We exist to transform lives, disciple nations, and glorify God in regions filled with spiritual dryness 
-            and humanitarian need.
-        </p>
-        <blockquote>
-            “Behold, I will do a new thing… I will even make a way in the wilderness and rivers in the desert.”  
-            — Isaiah 43:19–20
-        </blockquote>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>Desert Stream Partners International</h1>
+        <p>Bringing the living water of Christ to the spiritual deserts of Africa and beyond. We are an indigenous, faith-based mission dedicated to evangelism, discipleship, community development, and church-planting among the unreached.</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Partner With Us</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+        </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>Who We Are</h2>
-        <p>
-            DESPI is a faith-based, Bible-rooted missions organization called to proclaim Christ, disciple believers, 
-            empower communities, and plant sustainable churches. Our mandate is to bring the life-giving message 
-            of salvation to the unreached, beginning in Nigeria and Sudan and extending to the nations.
-        </p>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">Who We Are</h2>
+        <div class="about-content">
+            <div class="about-intro">
+                <div class="about-text">
+                    <h3>Bringing Living Water to Spiritual Deserts</h3>
+                    <p>Desert Stream Partners International (DESPI) is a faith-rooted African mission agency devoted to spreading the gospel to unreached peoples, especially within the Muslim world and remote African regions. We believe deeply in Christ’s command to make disciples of all nations and commit ourselves wholly to community transformation, church planting, and holistic outreach.</p>
+                    <p>Inspired by Isaiah 43:19-20, we are called to make a way in the wilderness and rivers in the desert, bringing the life-giving water of Christ to those in spiritual dryness.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1518471152221-7c2c0d1616b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="DESPI Mission in Africa">
+                </div>
+            </div>
+            
+            <h3 class="section-subtitle" style="text-align: center; margin: 50px 0 30px; color: var(--primary-blue);">Our Core Values</h3>
+            <div class="core-values">
+                <div class="value-card">
+                    <i class="fas fa-cross"></i>
+                    <h4>God-Centered Living</h4>
+                    <p>Reflect Christ through discipleship and holy living. Our lives are testimonies that captivate others to turn from wickedness.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-heart"></i>
+                    <h4>Passion for God & People</h4>
+                    <p>Demonstrate compassion through spiritual and physical ministry, ensuring the Great Commission doesn't become the Great Omission.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-church"></i>
+                    <h4>Church Planting & Growth</h4>
+                    <p>Partner with local churches for leadership development and evangelism, establishing self-sustaining congregations.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h4>Respect & Relationship</h4>
+                    <p>Honor every individual's background with love, acceptance, and unity, helping each person attain full potential in Christ.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Servant Leadership</h4>
+                    <p>Focus on people, not projects — develop leaders biblically through training and workshops.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Innovative Strategy</h4>
+                    <p>Use relevant, creative means to reach modern communities, making the gospel accessible to every unreached person.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- CORE VALUES -->
-    <section id="values">
-        <h2>Core Values</h2>
-        <ul>
-            <li><strong>God-Centered Living:</strong> Reflecting Christ through holy living and discipleship.</li>
-            <li><strong>Passion for God & People:</strong> Showing compassion through spiritual and physical ministry.</li>
-            <li><strong>Church Planting:</strong> Strengthening and expanding churches through training and partnership.</li>
-            <li><strong>Interpersonal Respect:</strong> Embracing diversity with love, encouragement, and unity.</li>
-            <li><strong>Servant Leadership:</strong> Training leaders through biblical, people-centered approaches.</li>
-            <li><strong>Innovation in Missions:</strong> Using relevant, creative strategies to reach modern communities.</li>
-        </ul>
+    <!-- Statement of Faith Section -->
+    <section id="faith" class="faith-section">
+        <h2 class="section-title">Statement of Faith</h2>
+        <div class="faith-container">
+            <div class="faith-item">
+                <h4>God</h4>
+                <p>We believe in one God; the creator of all things eternally existent in three persons: Father, Son, and the Holy Spirit.</p>
+            </div>
+            <div class="faith-item">
+                <h4>Jesus Christ</h4>
+                <p>We believe in our Lord Jesus Christ, His virgin birth, sinless life, divine miracles, atoning death, bodily resurrection, ascension, and personal return.</p>
+            </div>
+            <div class="faith-item">
+                <h4>The Holy Spirit</h4>
+                <p>We believe in God the Holy Spirit, who indwells all believers, enabling them to live holy lives and to witness for Christ.</p>
+            </div>
+            <div class="faith-item">
+                <h4>The Bible</h4>
+                <p>We believe the Bible is the fully and uniquely inspired Word of God, infallible and sufficient for faith and practice.</p>
+            </div>
+            <div class="faith-item">
+                <h4>Salvation</h4>
+                <p>We believe in salvation of the lost through regeneration by the Holy Spirit. Salvation is by grace through faith in Christ alone.</p>
+            </div>
+            <div class="faith-item">
+                <h4>Humanity</h4>
+                <p>We believe all people are created in God's image but fallen in sin, unable to save themselves from God's wrath.</p>
+            </div>
+            <div class="faith-item">
+                <h4>The Church</h4>
+                <p>We believe in the spiritual unity of all true believers in Christ who comprise the Church - the Body of Christ.</p>
+            </div>
+            <div class="faith-item">
+                <h4>Resurrection</h4>
+                <p>We believe in the resurrection of both the saved and the lost - eternal life for believers and eternal separation from God for the lost.</p>
+            </div>
+            <div class="faith-item">
+                <h4>The Great Commission</h4>
+                <p>We believe Christ commanded the Church to make disciples of all nations, baptizing and teaching obedience to all He commanded.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- STATEMENT OF FAITH -->
-    <section id="faith">
-        <h2>Statement of Faith</h2>
-        <ul>
-            <li><strong>God:</strong> One God in three Persons—Father, Son, and Holy Spirit.</li>
-            <li><strong>Jesus Christ:</strong> His deity, virgin birth, sinless life, miracles, atoning death, resurrection, and return.</li>
-            <li><strong>The Holy Spirit:</strong> Indwelling, empowering believers for holy living and service.</li>
-            <li><strong>The Bible:</strong> The inspired, infallible, authoritative Word of God.</li>
-            <li><strong>Salvation:</strong> By grace through faith in Christ alone.</li>
-            <li><strong>Humanity:</strong> All people are fallen and in need of redemption.</li>
-            <li><strong>The Church:</strong> The unified Body of Christ, called to maintain purity and truth.</li>
-            <li><strong>Resurrection:</strong> Eternal life for the saved; eternal separation for the lost.</li>
-            <li><strong>The Great Commission:</strong> The Church is commanded to disciple all nations.</li>
-        </ul>
+    <!-- Mission & Objectives Section -->
+    <section id="mission" class="mission-section">
+        <h2 class="section-title">Our Mission & Objectives</h2>
+        <div class="mission-content">
+            <div class="mission-container">
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <ul>
+                        <li>Promote spiritual growth, biblical discipleship, and socio-economic empowerment in Africa.</li>
+                        <li>Empower African communities for self-reliance, dignity, and sustainable development.</li>
+                        <li>Mobilize and equip the African Church for outreach, discipleship, and missionary work.</li>
+                    </ul>
+                </div>
+                <div class="mission-card">
+                    <h3>Aims & Objectives</h3>
+                    <ul>
+                        <li>Proclaim the gospel across African cultures through holistic ministry.</li>
+                        <li>Promote rural development and community sustainability.</li>
+                        <li>Strengthen church growth through discipleship and leadership training.</li>
+                        <li>Support vulnerable communities and destitute individuals.</li>
+                        <li>Partner with churches and mission organizations toward world evangelization.</li>
+                        <li>Coordinate mission awareness, recruit, train and send indigenous missionaries.</li>
+                        <li>Support agricultural development and environmental stewardship.</li>
+                        <li>Build local leadership capacity through structured training.</li>
+                        <li>Plant self-sustaining, self-propagating churches.</li>
+                        <li>Provide vocational training and empower women and youth.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- MISSION & OBJECTIVES -->
-    <section id="mission">
-        <h2>Mission & Objectives</h2>
-        <h3>Mission</h3>
-        <ul>
-            <li>Promote spiritual growth, discipleship, and socio-economic development.</li>
-            <li>Empower African communities for self-reliance and transformation.</li>
-            <li>Mobilize and equip the African Church for mission work and evangelism.</li>
-        </ul>
-
-        <h3>Aims & Objectives</h3>
-        <ul>
-            <li>Proclaim Christ across African cultures through holistic ministry.</li>
-            <li>Promote rural development and sustainability.</li>
-            <li>Strengthen church growth through training and discipleship.</li>
-            <li>Support vulnerable communities through empowerment and rehabilitation.</li>
-            <li>Partner with churches and mission bodies toward world evangelization.</li>
-            <li>Raise mission awareness, train, and send indigenous missionaries.</li>
-            <li>Support agricultural development and afforestation programs.</li>
-            <li>Develop leaders through capacity-building initiatives.</li>
-            <li>Plant self-sustaining indigenous churches.</li>
-            <li>Provide vocational training for women and youth.</li>
-        </ul>
+    <!-- Programs Section -->
+    <section id="programs" class="programs-section">
+        <h2 class="section-title">Programs & Activities</h2>
+        <div class="programs-content">
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3><span class="program-number">1</span> Ministry & Leadership Training (MLTP)</h3>
+                    <p>Capacity-building to equip Christian leaders for ministry and spiritual maturity through structured training programs.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">2</span> Mission Exposure & Jesus Lifestyle Training (MEJET)</h3>
+                    <p>Teaching biblical mission, discipleship, and effective outreach methods through "Know, Do, Be" modeling.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">3</span> Literacy Evangelism Training (LET)</h3>
+                    <p>Empowering individuals with literacy skills and providing community awareness (e.g., HIV/AIDS education).</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">4</span> Daughters of Destiny (DOD)</h3>
+                    <p>Mercy ministry reaching vulnerable women, children, and individuals in need of care and rehabilitation.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">5</span> Mobilization & Awareness</h3>
+                    <p>Engaging churches through workshops, seminars, and training for mission outreach and evangelism.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">6</span> Community Development & Humanitarian Projects</h3>
+                    <p>Grassroots outreach including health, livelihood, disaster relief, and community empowerment.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">7</span> Education & Skills Training</h3>
+                    <p>Formal and informal education, vocational training, and scholarships to uplift communities.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">8</span> Counseling & Mentoring</h3>
+                    <p>Spiritual and emotional support, trauma care, and mentorship for vulnerable individuals.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">9</span> The Carmel Approach</h3>
+                    <p>Culturally relevant evangelism using familiar community contexts to share God's love.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">10</span> The Treasure Project</h3>
+                    <p>Outreach to Arabic-speaking nations through scripture distribution via solar-powered media devices.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">11</span> Food & Relief Ministry</h3>
+                    <p>Emergency relief including food distribution, water, shelter, and basic medical support for displaced persons.</p>
+                </div>
+                <div class="program-card">
+                    <h3><span class="program-number">12</span> Strategic Discipleship Training</h3>
+                    <p>Developing believers' character, faith, and ministry skills through targeted discipleship programs.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- PROGRAMS -->
-    <section id="programs">
-        <h2>Programs & Activities</h2>
-
-        <h3>Ministry & Leadership Training Program (MLTP)</h3>
-        <p>A capacity-building initiative designed to develop Christian leadership and spiritual maturity.</p>
-
-        <h4>Mission Exposure & Jesus Lifestyle Training (MEJET)</h4>
-        <p>Teaches biblical foundations, mission strategies, and discipleship through heart, perspective, and action.</p>
-
-        <h4>Strategic Discipleship Training</h4>
-        <p>Develops character, spiritual formation, and ministry skills for new believers and community leaders.</p>
-
-        <h3>Literacy Evangelism Training (LET)</h3>
-        <p>Empowers individuals with literacy skills, promoting education and poverty alleviation.</p>
-
-        <h3>Daughters of Destiny (DOD)</h3>
-        <p>A mercy ministry reaching commercial sex workers, vulnerable children, and individuals with HIV/AIDS.</p>
-
-        <h3>Mobilization & Awareness</h3>
-        <p>Equipping churches to reach unreached people groups through workshops and training.</p>
-
-        <h3>Community Development & Humanitarian Projects</h3>
-        <p>Grassroots transformation through health, livelihood, and disaster relief initiatives.</p>
-
-        <h3>Education Programs</h3>
-        <p>Providing formal and informal education, skills training, and scholarships to uplift communities.</p>
-
-        <h3>Counseling & Mentoring</h3>
-        <p>Offering spiritual and emotional support, trauma care, and mentorship.</p>
-
-        <h3>The Carmel Approach</h3>
-        <p>A culturally relevant evangelism method using familiar community concepts.</p>
-
-        <h3>The Treasure Project</h3>
-        <p>Distributing solar-powered Arabic scripture devices across 20+ nations.</p>
-
-        <h3>Food & Relief Ministry</h3>
-        <p>Providing food, shelter, water, and medical help during crises.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title contact-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get In Touch</h3>
+                <p>We welcome partnerships, volunteering, and support. Reach out to us — we'd love to connect and walk together in ministry.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>timjuel@yahoo.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+211 926 920 011</p>
+                            <p>+211 928 181 542</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Website</h4>
+                            <p>desertstreamsfaith.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Republic of South Sudan<br>Office of the President<br>Bureau of Religious Affairs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: ___________________</p>
-        <p>Phone: ___________________</p>
-        <p>We welcome partnerships, invitations, and ministry collaboration.</p>
-        <p>“Commit to the Lord whatever you do, and your plans will succeed.” — Proverbs 16:3</p>
-    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <div class="footer-logo">DESPI<span>Missions</span></div>
+                <p>Bringing the living water of Christ to the spiritual deserts of Africa and beyond through evangelism, discipleship, and community development.</p>
+                <p style="margin-top: 15px; font-style: italic;">"Behold, I will do a new thing; now it shall spring forth; shall ye not know it? I will even make a way in the wilderness, and rivers in the desert." - Isaiah 43:19</p>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#faith">Statement of Faith</a></li>
+                    <li><a href="#mission">Our Mission</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Key Programs</h4>
+                <ul>
+                    <li><a href="#programs">Ministry & Leadership Training</a></li>
+                    <li><a href="#programs">Daughters of Destiny</a></li>
+                    <li><a href="#programs">Community Development</a></li>
+                    <li><a href="#programs">The Treasure Project</a></li>
+                    <li><a href="#programs">Food & Relief Ministry</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Connect With Us</h4>
+                <p>We welcome partnerships and support for our mission work in Africa and the Muslim world.</p>
+                <p style="margin-top: 15px;"><strong>Desert Stream Partners International (DESPI)</strong><br>
+                Incorporated under The Non-Governmental Act 2016<br>
+                Republic of South Sudan</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Desert Stream Partners International (DESPI) — All rights reserved. | "Commit to the Lord whatever you do, and your plans will succeed." — Proverbs 16:3</p>
+        </div>
+    </footer>
 
-</div>
-
-<footer>
-    <p>© 2025 Desert Stream Partners International (DESPI) — All Rights Reserved</p>
-</footer>
-
+    <script type="text/javascript" src="./js/index.js"></script>      
+    
 </body>
 </html>
