@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - DESPI Missions</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Gallery CSS -->
+    <link rel="stylesheet" href="./css/gallery.css">
+    
+    <!-- Lightbox CSS (for image modal) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+</head>
+<body>
+       <!-- Top Bar -->
+    <div class="top-bar bg-primary-blue text-white py-2">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+                <div class="contact-info d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+                    <span><i class="fas fa-envelope me-1"></i> timjuel@yahoo.com</span>
+                    <span><i class="fas fa-phone me-1"></i> +211 926 920 011</span>
+                </div>
+                <div class="social-links mt-2 mt-md-0">
+                    <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Main Navigation -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top navbar-transition">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="logo-text">DE<span>SPI</span></span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" 
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    
+                    <!-- Who We Are Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whoWeAreDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Who We Are
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whoWeAreDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="about.html#faith">Statement of Faith</a></li>
+                            <li><a class="dropdown-item" href="about.html#mission">Our Mission</a></li>
+                            <li><a class="dropdown-item" href="about.html#values">Core Values</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- What We Do Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="whatWeDoDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            What We Do
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="whatWeDoDropdown">
+                            <li><a class="dropdown-item" href="programs.html">Programs</a></li>
+                            <li><a class="dropdown-item" href="resources.html">Resources</a></li>
+                            <li><a class="dropdown-item" href="events.html">Events</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    
+                    <!-- Take Action Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="takeActionDropdown" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Take Action
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="takeActionDropdown">
+                            <li><a class="dropdown-item" href="index.html#donate">Donate</a></li>
+                            <li><a class="dropdown-item" href="index.html#contact">Contact Us</a></li>
+                            <li><a class="dropdown-item" href="index.html#volunteer">Volunteer</a></li>
+                            <li><a class="dropdown-item" href="index.html#pray">Pray</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero Section -->
+    <!-- <section class="gallery-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold text-white mb-4">Our Mission in Pictures</h1>
+                    <p class="lead text-white mb-5">Witness the transformative work of DESPI across Africa through these powerful images of faith, hope, and community development.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+        <!-- Gallery Hero Section with Carousel -->
+<section class="gallery-hero">
+    <!-- Carousel -->
+    <div id="galleryCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+        </div>
+        
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="./Gallery/AID/IMG-20251215-WA0002.jpg" 
+                     class="d-block w-100" alt="Church Service">
+                
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="./Gallery/AID/IMG-20251215-WA0003.jpg" 
+                     class="d-block w-100" alt="Baptism">
+               
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="./Gallery/Graduation/IMG-20251215-WA0024.jpg" 
+                     class="d-block w-100" alt="Community Development">
+             
+            </div>
+            
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <img src="./Gallery/Graduation/IMG-20251215-WA0026.jpg" 
+                     class="d-block w-100" alt="Leadership Training">
+               
+            </div>
+        </div>
+        
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <!-- Hero Content Overlay -->
+    <div class="hero-content-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold text-white mb-4">Our Mission in Pictures</h1>
+                    <p class="lead text-white mb-5">Witness the transformative work of DESPI across Africa through these powerful images of faith, hope, and community development.</p>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter py-4 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+                        <span class="filter-label">Filter by:</span>
+                        <button class="btn btn-outline-primary-blue filter-btn active" data-filter="all">All Photos</button>
+                        <button class="btn btn-outline-primary-blue filter-btn" data-filter="ministry">Ministry</button>
+                        <button class="btn btn-outline-primary-blue filter-btn" data-filter="training">Training</button>
+                        <button class="btn btn-outline-primary-blue filter-btn" data-filter="community">Community</button>
+                        <button class="btn btn-outline-primary-blue filter-btn" data-filter="outreach">Outreach</button>
+                        <button class="btn btn-outline-primary-blue filter-btn" data-filter="events">Events</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid py-5">
+        <div class="container-fluid px-lg-5">
+            <!-- Row 1 -->
+            <div class="row g-3 gallery-items">
+                <!-- Ministry Images -->
+                <div class="col-md-4 col-lg-3 gallery-item ministry" data-category="ministry">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1541140532154-b024d705b90a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Church Service - South Sudan">
+                            <img src="https://images.unsplash.com/photo-1541140532154-b024d705b90a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Church Service" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Church Service</h5>
+                                    <p>Sunday worship in South Sudan</p>
+                                    <span class="gallery-category badge bg-primary-green">Ministry</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 gallery-item ministry" data-category="ministry">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1518834103328-3d54dbba0421?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Baptism Ceremony">
+                            <img src="https://images.unsplash.com/photo-1518834103328-3d54dbba0421?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Baptism Ceremony" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Baptism Ceremony</h5>
+                                    <p>New believers in Christ</p>
+                                    <span class="gallery-category badge bg-primary-green">Ministry</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Training Images -->
+                <div class="col-md-4 col-lg-3 gallery-item training" data-category="training">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1518471152221-7c2c0d1616b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Leadership Training Session">
+                            <img src="https://images.unsplash.com/photo-1518471152221-7c2c0d1616b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Leadership Training" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Leadership Training</h5>
+                                    <p>Equipping church leaders</p>
+                                    <span class="gallery-category badge bg-primary-blue">Training</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 gallery-item training" data-category="training">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Bible Study Group">
+                            <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Bible Study" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Bible Study Group</h5>
+                                    <p>Discipleship training</p>
+                                    <span class="gallery-category badge bg-primary-blue">Training</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Community Images -->
+                <div class="col-md-4 col-lg-3 gallery-item community" data-category="community">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Community Development Project">
+                            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Community Development" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Community Development</h5>
+                                    <p>Water well installation</p>
+                                    <span class="gallery-category badge bg-warning">Community</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 gallery-item community" data-category="community">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Medical Outreach">
+                            <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Medical Outreach" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Medical Outreach</h5>
+                                    <p>Healthcare services</p>
+                                    <span class="gallery-category badge bg-warning">Community</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Outreach Images -->
+                <div class="col-md-4 col-lg-3 gallery-item outreach" data-category="outreach">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Street Evangelism">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Street Evangelism" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Street Evangelism</h5>
+                                    <p>Sharing the Gospel</p>
+                                    <span class="gallery-category badge bg-info">Outreach</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 gallery-item outreach" data-category="outreach">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1580477667995-2b94f01c9516?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Youth Outreach">
+                            <img src="https://images.unsplash.com/photo-1580477667995-2b94f01c9516?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Youth Outreach" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Youth Outreach</h5>
+                                    <p>Engaging young people</p>
+                                    <span class="gallery-category badge bg-info">Outreach</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Events Images -->
+                <div class="col-md-4 col-lg-3 gallery-item events" data-category="events">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1501281667305-0d4ebd4bdfc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Mission Conference">
+                            <img src="https://images.unsplash.com/photo-1501281667305-0d4ebd4bdfc1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Mission Conference" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Mission Conference</h5>
+                                    <p>Annual gathering</p>
+                                    <span class="gallery-category badge bg-purple">Events</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 gallery-item events" data-category="events">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Prayer Gathering">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Prayer Gathering" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Prayer Gathering</h5>
+                                    <p>Intercessory prayer night</p>
+                                    <span class="gallery-category badge bg-purple">Events</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- More Ministry Images -->
+                <div class="col-md-4 col-lg-3 gallery-item ministry" data-category="ministry">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1494314671902-399b18174975?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Worship Team">
+                            <img src="https://images.unsplash.com/photo-1494314671902-399b18174975?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Worship Team" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Worship Team</h5>
+                                    <p>Praising God together</p>
+                                    <span class="gallery-category badge bg-primary-green">Ministry</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-3 gallery-item community" data-category="community">
+                    <div class="gallery-card">
+                        <a href="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                           data-lightbox="gallery" data-title="Food Distribution">
+                            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                                 alt="Food Distribution" class="img-fluid">
+                            <div class="gallery-overlay">
+                                <div class="gallery-info">
+                                    <h5>Food Distribution</h5>
+                                    <p>Helping families in need</p>
+                                    <span class="gallery-category badge bg-warning">Community</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+        <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="footer-logo mb-3">DESPI<span>Missions</span></h3>
+                    <p class="mb-4">Bringing the living water of Christ to the spiritual deserts of Africa and beyond through evangelism, discipleship, and community development.</p>
+                    <p class="fst-italic">"Behold, I will do a new thing; now it shall spring forth; shall ye not know it? I will even make a way in the wilderness, and rivers in the desert." - Isaiah 43:19</p>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3 text-primary-green">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#programs" class="text-white text-decoration-none">Programs</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                        <li class="mb-2"><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3 text-primary-green">Programs</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#programs" class="text-white text-decoration-none">Ministry Training</a></li>
+                        <li class="mb-2"><a href="#programs" class="text-white text-decoration-none">Community Development</a></li>
+                        <li class="mb-2"><a href="#programs" class="text-white text-decoration-none">Daughters of Destiny</a></li>
+                        <li class="mb-2"><a href="#programs" class="text-white text-decoration-none">The Treasure Project</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-3 text-primary-green">Connect With Us</h5>
+                    <p>Follow us on social media for updates and prayer requests.</p>
+                    <div class="d-flex gap-3 mb-4">
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube fa-2x"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h6 class="mb-2">Subscribe to Newsletter</h6>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary-green" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-5 border-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Desert Stream Partners International (DESPI). All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">"Commit to the Lord whatever you do, and your plans will succeed." — Proverbs 16:3</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+      
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    
+    <!-- Gallery JS -->
+    <script src="./js/index1.js"></script>
+</body>
+</html>

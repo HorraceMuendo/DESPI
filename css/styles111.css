@@ -1,0 +1,522 @@
+/* Simplified Custom CSS Variables */
+:root {
+    --primary-blue: #1a3c6e;
+    --secondary-blue: #2c5282;
+    --primary-green: #2d6a4f;
+    --light-green: #40916c;
+    --light-gray: #f5f7fa;
+    --medium-gray: #e1e8f0;
+    --dark-gray: #2d3748;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-gray);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+/* Make content fill the page */
+.container {
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Section Backgrounds - Simpler */
+#home {
+    background-color: var(--primary-blue);
+}
+
+#about {
+    background-color: var(--white);
+}
+
+#mission {
+    background-color: var(--light-gray);
+}
+
+#programs {
+    background-color: var(--white);
+}
+
+#gallery {
+    background-color: var(--light-gray);
+}
+
+#contact {
+    background-color: var(--white);
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-blue);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.top-bar .contact-info span {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.social-links a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--light-green);
+}
+
+/* Navbar */
+.navbar-transition {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 15px 0;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    z-index: 1020;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+.navbar-transition.scrolled {
+    top: 0;
+}
+
+/* Logo */
+.navbar-brand .logo-text {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.logo-text span {
+    color: var(--primary-green);
+}
+
+.navbar-nav .nav-link {
+    color: var(--dark-gray) !important;
+    font-weight: 500;
+    padding: 8px 15px !important;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: var(--light-gray);
+    color: var(--primary-blue) !important;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Hero Section */
+.hero-section {
+    height: calc(100vh - 40px);
+    background-color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+    padding-top: 40px;
+}
+
+.hero-section h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section .lead {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary-green);
+}
+
+.section-title.text-center {
+    border-bottom: none;
+    position: relative;
+}
+
+.section-title.text-center::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-green);
+}
+
+/* Content spacing */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row > * {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Cards */
+.program-card {
+    background: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    padding: 25px;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.program-card:hover {
+    border-color: var(--primary-green);
+}
+
+.program-number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-green);
+    color: var(--white);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.program-card h4 {
+    color: var(--primary-blue);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.program-card p {
+    color: var(--dark-gray);
+    margin-bottom: 0;
+}
+
+/* Gallery */
+#gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 4px;
+    padding: 10px 25px;
+    font-weight: 500;
+    border: none;
+}
+
+.btn-lg {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+.btn-primary-blue {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary-blue:hover {
+    background-color: var(--secondary-blue);
+    color: var(--white);
+}
+
+.btn-primary-green {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.btn-primary-green:hover {
+    background-color: var(--light-green);
+    color: var(--white);
+}
+
+.btn-outline-light {
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    color: var(--white);
+    background-color: transparent;
+}
+
+.btn-outline-light:hover {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    border-color: var(--white);
+}
+
+/* Contact Section */
+.contact-info h5 {
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    color: var(--dark-gray);
+    margin-bottom: 15px;
+}
+
+.contact-info i {
+    color: var(--primary-green);
+}
+
+.card {
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--medium-gray);
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 0.95rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 2px rgba(45, 106, 79, 0.1);
+}
+
+.form-label {
+    color: var(--dark-gray);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 50px 0 30px;
+}
+
+footer h5 {
+    color: var(--light-green);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+footer a:hover {
+    color: var(--light-green);
+}
+
+.footer-logo {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: var(--light-green);
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.social-links a:hover {
+    color: var(--light-green);
+}
+
+.newsletter .form-control {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.newsletter .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter .btn {
+    background-color: var(--primary-green);
+    color: var(--white);
+}
+
+.newsletter .btn:hover {
+    background-color: var(--light-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section {
+        height: auto;
+        min-height: calc(100vh - 40px);
+        padding: 60px 0;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .program-card {
+        margin-bottom: 20px;
+    }
+    
+    .navbar-transition {
+        top: 40px;
+    }
+    
+    .navbar-transition.scrolled {
+        top: 0;
+    }
+    
+    body {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .top-bar {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+    
+    .top-bar .d-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-info {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .social-links {
+        text-align: center;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .d-flex.justify-content-center.gap-3 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Ensure content fits the page */
+.row.g-4 {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.row.g-4 > * {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Fix image responsiveness */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Remove all smooth animations */
+* {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Ensure no white text on colored backgrounds */
+h1, h2, h3, h4, h5, h6, p, span, a {
+    color: inherit;
+}
+
+/* Darker gray backgrounds for contrast */
+#mission.bg-light,
+#gallery.bg-light {
+    background-color: var(--medium-gray) !important;
+}
+
+/* Clean section spacing */
+section:not(:last-child) {
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+/* Better form layout */
+.form-row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.form-row > * {
+    padding-left: 10px;
+    padding-right: 10px;
+}
