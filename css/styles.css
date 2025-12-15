@@ -380,6 +380,10 @@ section {
     transform: scale(1.05);
 }
 
+.about-us {
+ padding-top: 00px;
+}
+
 /* Core Values */
 .core-values {
     display: grid;
