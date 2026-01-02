@@ -1,0 +1,484 @@
+/* Contact Page Specific Styles */
+
+/* Custom CSS Variables */
+:root {
+    --primary-blue: #0d3b66;
+    --secondary-blue: #1d639c;
+    --light-blue: #3a86ff;
+    --primary-green: #2a9d8f;
+    --light-green: #76c893;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #333333;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --nav-transparent: rgba(13, 59, 102, 0.95);
+}
+
+
+
+
+
+/* Custom Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-gray);
+    padding-top: 40px; /* For top bar */
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-blue);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    font-size: 0.9rem;
+}
+
+/* Main Navigation - WITH ANIMATIONS RESTORED */
+.navbar-transition {
+    transition: all 0.4s ease;
+    background-color: var(--nav-transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    z-index: 1020;
+}
+
+.navbar-transition.scrolled {
+    top: 1;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 10px 0;
+}
+
+.navbar-brand .logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.navbar-transition.scrolled .navbar-brand .logo-text {
+    color: var(--primary-blue);
+}
+
+.logo-text span {
+    color: var(--light-green);
+}
+
+.navbar-nav .nav-link {
+    color: var(--white) !important;
+    font-weight: 600;
+    padding: 8px 15px !important;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.navbar-transition.scrolled .navbar-nav .nav-link {
+    color: var(--primary-blue) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--light-green) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-green);
+    transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: calc(100% - 30px);
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    color: var(--dark-gray);
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-green);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: background-image 0.3s;
+}
+
+.navbar-transition.scrolled .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2813, 59, 102, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+/* Contact Hero */
+.contact-hero {
+    height: 70vh;
+    min-height: 400px;
+      background-image: linear-gradient(rgba(13, 59, 102, 0.7), rgba(42, 157, 143, 0.5)), 
+                url('../Gallery/AID/IMG-20251215-WA0003.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+    padding-top: 40px;
+}
+
+.contact-hero h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.contact-hero .lead {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.contact-hero .btn {
+    border-radius: 50px;
+    padding: 12px 35px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-hero .btn-primary-green {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.contact-hero .btn-primary-green:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-hero .btn-outline-light {
+    border: 2px solid var(--white);
+}
+
+.contact-hero .btn-outline-light:hover {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--primary-blue);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+    border-radius: 2px;
+}
+
+/* Contact Cards */
+.contact-card {
+    background: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-green);
+}
+
+.contact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.1), rgba(118, 200, 147, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.contact-card h4 {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.contact-card p {
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+.phone-numbers p {
+    margin-bottom: 5px;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+/* Office Hours */
+.office-hours {
+    border-left: 4px solid var(--primary-green);
+    box-shadow: var(--shadow);
+}
+
+.office-hours h4 {
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+.office-hours h5 {
+    color: var(--primary-green);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.office-hours p {
+    margin-bottom: 10px;
+    color: var(--dark-gray);
+}
+
+/* Contact Form */
+.contact-form-section .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    color: var(--primary-blue);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.form-label i {
+    width: 20px;
+    text-align: center;
+}
+
+.form-control,
+.form-select {
+    border: 2px solid var(--medium-gray);
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.form-check-label {
+    color: var(--dark-gray);
+    cursor: pointer;
+}
+
+/* Submit Button */
+.btn-primary-green {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-green:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(42, 157, 143, 0.3);
+}
+
+/* FAQ Section */
+.accordion-button {
+    background-color: var(--light-gray);
+    color: var(--primary-blue);
+    font-weight: 500;
+    padding: 20px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px !important;
+    margin-bottom: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-green);
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 4px rgba(42, 157, 143, 0.1);
+    border-color: var(--primary-green);
+}
+
+.accordion-body {
+    padding: 20px;
+    background-color: white;
+    border: 1px solid var(--medium-gray);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    color: var(--dark-gray);
+}
+
+.accordion-body a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.accordion-body a:hover {
+    text-decoration: underline;
+}
+
+/* Map Section */
+.map-container {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.map-placeholder {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+}
+
+.map-placeholder i {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.map-placeholder h4 {
+    margin-bottom: 15px;
+}
+
+.map-placeholder p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .contact-hero .lead {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .contact-card {
+        margin-bottom: 20px;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-hero {
+        height: 35vh;
+        min-height: 250px;
+    }
+    
+    .contact-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-hero .lead {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .contact-hero .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .map-container {
+        height: 250px;
+    }
+    
+    .accordion-button {
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+    
+    .form-control,
+    .form-select {
+        padding: 10px 15px;
+    }
+}

@@ -1,0 +1,550 @@
+/* Custom CSS Variables */
+:root {
+    --primary-blue: #0d3b66;
+    --secondary-blue: #1d639c;
+    --light-blue: #3a86ff;
+    --primary-green: #2a9d8f;
+    --light-green: #76c893;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #333333;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --nav-transparent: rgba(13, 59, 102, 0.95);
+}
+
+/* Custom Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-gray);
+    padding-top: 40px; /* For top bar */
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: var(--primary-blue);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    font-size: 0.9rem;
+}
+
+/* Main Navigation - WITH ANIMATIONS RESTORED */
+.navbar-transition {
+    transition: all 0.4s ease;
+    background-color: var(--nav-transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    z-index: 1020;
+}
+
+.navbar-transition.scrolled {
+    top: 1;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    padding: 10px 0;
+}
+
+.navbar-brand .logo-text {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.navbar-transition.scrolled .navbar-brand .logo-text {
+    color: var(--primary-blue);
+}
+
+.logo-text span {
+    color: var(--light-green);
+}
+
+.navbar-nav .nav-link {
+    color: var(--white) !important;
+    font-weight: 600;
+    padding: 8px 15px !important;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.navbar-transition.scrolled .navbar-nav .nav-link {
+    color: var(--primary-blue) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--light-green) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    width: 0;
+    height: 2px;
+    background-color: var(--light-green);
+    transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: calc(100% - 30px);
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+    color: var(--dark-gray);
+    transition: all 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-green);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    transition: background-image 0.3s;
+}
+
+.navbar-transition.scrolled .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2813, 59, 102, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+
+/* Donations Page Specific Styles */
+
+/* Variables */
+:root {
+    --primary-blue: #0d3b66;
+    --secondary-blue: #1d639c;
+    --primary-green: #2a9d8f;
+    --light-green: #76c893;
+    --white: #ffffff;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --dark-gray: #333333;
+    --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Donate Hero */
+.donate-hero {
+    height: 50vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(13, 59, 102, 0.85), rgba(42, 157, 143, 0.8)), 
+                url('');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+    padding-top: 40px;
+}
+
+.donate-hero h1 {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.donate-hero .lead {
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.donate-hero .btn {
+    border-radius: 50px;
+    padding: 12px 35px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.donate-hero .btn-primary-green {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.donate-hero .btn-primary-green:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.donate-hero .btn-outline-light {
+    border: 2px solid var(--white);
+}
+
+.donate-hero .btn-outline-light:hover {
+    background-color: var(--white);
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+.section-title {
+    color: var(--primary-blue);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-green));
+    border-radius: 2px;
+}
+
+.impact-hero {
+    margin-top: 70px;
+}
+
+/* Impact Cards */
+.impact-card {
+    background: var(--white);
+    border: 1px solid var(--medium-gray);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-green);
+}
+
+.impact-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, rgba(42, 157, 143, 0.1), rgba(118, 200, 147, 0.1));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.impact-card .display-5 {
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+}
+
+.impact-card p {
+    color: var(--dark-gray);
+    font-size: 0.95rem;
+}
+
+/* Impact Stats */
+.impact-stats {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    padding: 30px 40px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(13, 59, 102, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.impact-stats > div {
+    padding: 0 30px;
+    position: relative;
+}
+
+.impact-stats > div:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.impact-stats .display-4 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #ffffff, var(--light-green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.impact-stats .h6 {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* Bank Info Card */
+.bank-info-card {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+}
+
+.bank-info-card .card-header {
+    border-bottom: none;
+}
+
+.bank-info-card .card-header h3 {
+    font-weight: 600;
+}
+
+.detail-group {
+    margin-bottom: 30px;
+}
+
+.detail-group h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    padding: 10px 15px;
+    background: var(--light-gray);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.detail-value.highlight {
+    background: linear-gradient(135deg, rgba(13, 59, 102, 0.1), rgba(42, 157, 143, 0.1));
+    border-left: 4px solid var(--primary-green);
+    font-weight: 600;
+}
+
+.detail-value.code {
+    font-family: 'Courier New', monospace;
+    background: var(--white);
+    border: 2px solid var(--primary-blue);
+}
+
+/* Instructions */
+.instructions {
+    background: rgba(13, 59, 102, 0.05);
+    border: 2px solid var(--primary-blue);
+}
+
+.instructions h5 {
+    font-weight: 600;
+}
+
+.instructions p {
+    color: var(--dark-gray);
+    margin-bottom: 0;
+}
+
+/* Buttons */
+.btn-primary-green {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: var(--white);
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-green:hover {
+    background-color: var(--light-green);
+    border-color: var(--light-green);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(42, 157, 143, 0.3);
+}
+
+.btn-outline-primary-blue {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary-blue:hover {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Contact Support */
+.contact-support {
+    border-top: 5px solid var(--primary-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donate-hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .donate-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .donate-hero .lead {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .impact-stats {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+    
+    .impact-stats > div {
+        padding: 0;
+    }
+    
+    .impact-stats > div:not(:last-child)::after {
+        display: none;
+    }
+    
+    .impact-stats .display-4 {
+        font-size: 2.5rem;
+    }
+    
+    .bank-info-card .card-body {
+        padding: 30px !important;
+    }
+    
+    .detail-value {
+        font-size: 1rem;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .donate-hero {
+        height: 35vh;
+        min-height: 250px;
+    }
+    
+    .donate-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .donate-hero .lead {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .donate-hero .btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    .impact-stats {
+        padding: 20px;
+    }
+    
+    .impact-stats .display-4 {
+        font-size: 2rem;
+    }
+    
+    .impact-card {
+        margin-bottom: 15px;
+    }
+    
+    .btn-primary-green,
+    .btn-outline-primary-blue {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+/* =========================================
+   Custom Color Utility Classes (REQUIRED)
+   ========================================= */
+
+/* Text Colors */
+.text-primary-blue {
+    color: var(--primary-blue) !important;
+}
+
+.text-secondary-blue {
+    color: var(--secondary-blue) !important;
+}
+
+.text-primary-green {
+    color: var(--primary-green) !important;
+}
+
+.text-light-green {
+    color: var(--light-green) !important;
+}
+
+/* Background Colors */
+.bg-primary-blue {
+    background-color: var(--primary-blue) !important;
+}
+
+.bg-secondary-blue {
+    background-color: var(--secondary-blue) !important;
+}
+
+.bg-primary-green {
+    background-color: var(--primary-green) !important;
+}
+
+.bg-light-green {
+    background-color: var(--light-green) !important;
+}
+
+/* Soft Section Background */
+.bg-primary-blue-light {
+    background-color: rgba(13, 59, 102, 0.08) !important;
+}
